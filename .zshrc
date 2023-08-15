@@ -40,17 +40,17 @@ source $ZSH/oh-my-zsh.sh
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
-# export LANG=en_US.UTF-8
+ export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
-export EDITOR='nvim'
+# export EDITOR='nvim'
 # else
-#   export EDITOR='mvim'
+   export EDITOR='lvim'
 # fi
 
 # Compilation flags
-# export ARCHFLAGS="-arch x86_64"
+ export ARCHFLAGS="-arch x86_64"
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
@@ -83,7 +83,8 @@ alias downloads="cd /mnt/c/Users/'Focus Mode.THEZONE'/Downloads/"
 alias home="cd /mnt/c/Users/'Focus Mode.THEZONE'/"
 alias desktop="cd  /mnt/c/Users/'Focus Mode.THEZONE'/Desktop/"
 alias kittyconf="cd ~/.config/kitty/ && vi kitty.conf"
-alias vi=nvim
+#alias vi=nvim
+alias vi=lvim
 alias viconf='cd ~/.config/nvim/ && vi .'
 alias pb="~/pocketbase serve"
 alias alacrittyconf="~/.config/alacritty && vi"
@@ -105,7 +106,7 @@ gitacp(){
 pmd(){
     prisma migrate dev --name "$1"
 }
-export LC_ALL=en_IN.UTF-8
-export LANG=en_IN.UTF-8
+#export LC_ALL=en_IN.UTF-8
+#export LANG=en_IN.UTF-8
 export GOPATH=$HOME/go
 alias qemu=qemu-system-x86_64 

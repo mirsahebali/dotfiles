@@ -1,28 +1,39 @@
--- Read the docs: https://www.lunarvim.org/docs/configuration
--- Video Tutorials: https://www.youtube.com/watch?v=sFA9kX-Ud_c&list=PLhoH5vyxr6QqGu0i7tt_XoVK9v-KvZ3m6
--- Forum: https://www.reddit.com/r/lunarvim/
--- Discord: https://discord.com/invite/Xb9B4Ny
--- Read the docs: https://www.lunarvim.org/docs/configuration
--- Video Tutorials: https://www.youtube.com/watch?v=sFA9kX-Ud_c&list=PLhoH5vyxr6QqGu0i7tt_XoVK9v-KvZ3m6
--- Forum: https://www.reddit.com/r/lunarvim/
--- Discord: https://discord.com/invite/Xb9B4Ny
---
--- Read the docs: https://www.lunarvim.org/docs/configuration
--- Video Tutorials: https://www.youtube.com/watch?v=sFA9kX-Ud_c&list=PLhoH5vyxr6QqGu0i7tt_XoVK9v-KvZ3m6
--- Forum: https://www.reddit.com/r/lunarvim/
--- Discord: https://discord.com/invite/Xb9B4Ny
--- Read the docs: https://www.lunarvim.org/docs/configuration
--- Video Tutorials: https://www.youtube.com/watch?v=sFA9kX-Ud_c&list=PLhoH5vyxr6QqGu0i7tt_XoVK9v-KvZ3m6
--- Forum: https://www.reddit.com/r/lunarvim/
--- Discord: https://discord.com/invite/Xb9B4Ny
-
 -- lvim.transparent_window = true
 lvim.colorscheme = "ayu"
 lvim.builtin.lualine.style = "default"
+lvim.lsp.installer.setup.automatic_installation = true
+lvim.format_on_save.enabled = true
+-- lvim.format_on_save.pattern = { "*.lua", "*.py" }
 vim.opt.cmdheight = 2
 lvim.keys.normal_mode["w"] = lvim.keys.normal_mode["b"]
 -- Plugins
 lvim.plugins = {
+  --Go plugins
+{
+  "olexsmir/gopher.nvim",
+   dependencies = { -- dependencies
+    "nvim-lua/plenary.nvim",
+    "nvim-treesitter/nvim-treesitter",
+  },
+}
+,
+{
+  "ray-x/go.nvim",
+  dependencies = {  -- optional packages
+    "ray-x/guihua.lua",
+    "neovim/nvim-lspconfig",
+    "nvim-treesitter/nvim-treesitter",
+  },
+  config = function()
+    require("go").setup()
+  end,
+  event = {"CmdlineEnter"},
+  ft = {"go", 'gomod'},
+  build = ':lua require("go.install").update_all_sync()' -- if you need to install/update all binaries
+}
+  ,
+"leoluz/nvim-dap-go"
+  ,
   -- You must install glow globally
   -- https://github.com/charmbracelet/glow
   -- yay -S glow
@@ -228,6 +239,7 @@ formatters.setup({
     filetypes = { "typescript", "typescriptreact", "javascript", "javascriptreact", "lua", "css", "less", "scss" },
   },
 })
+
 -- Set up real time diagnostics
 
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
@@ -246,8 +258,77 @@ vim.lsp.buf.format({ timeout_ms = 3001 })
 local lspconfig = require("lspconfig")
 local configs = require("lspconfig/configs")
 local capabilities = vim.lsp.protocol.make_client_capabilities()
-capabilities.textDocument.completion.completionItem.snippetSupport = true
+local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
+capabilities.textDocument.completion.completionItem.snippetSupport = true
+lspconfig.clangd.setup({
+  capabilities = capabilities,
+  on_attach = on_attach,
+})
+-- Go config
+
+lspconfig.gopls.setup({
+  capabilities = capabilities,
+  on_attach = on_attach,
+})
+require("gopher").setup {
+  commands = {
+    go = "go",
+    gomodifytags = "gomodifytags",
+    gotests = "~/go/bin/gotests", -- also you can set custom command path
+    impl = "impl",
+    iferr = "iferr",
+  },
+}
+require"gopher.dap".setup()
+
+-- Run gofmt + goimport on save
+
+local format_sync_grp = vim.api.nvim_create_augroup("GoImport", {})
+vim.api.nvim_create_autocmd("BufWritePre", {
+  pattern = "*.go",
+  callback = function()
+   require('go.format').goimport()
+  end,
+  group = format_sync_grp,
+})
+require('dap-go').setup {
+  -- Additional dap configurations can be added.
+  -- dap_configurations accepts a list of tables where each entry
+  -- represents a dap configuration. For more details do:
+  -- :help dap-configuration
+  dap_configurations = {
+    {
+      -- Must be "go" or it will be ignored by the plugin
+      type = "go",
+      name = "Attach remote",
+      mode = "remote",
+      request = "attach",
+    },
+  },
+  -- delve configurations
+  delve = {
+    -- the path to the executable dlv which will be used for debugging.
+    -- by default, this is the "dlv" executable on your PATH.
+    path = "dlv",
+    -- time to wait for delve to initialize the debug session.
+    -- default to 20 seconds
+    initialize_timeout_sec = 20,
+    -- a string that defines the port to start delve debugger.
+    -- default to string "${port}" which instructs nvim-dap
+    -- to start the process in a random available port
+    port = "${port}",
+    -- additional args to pass to dlv
+    args = {},
+    -- the build flags that are passed to delve.
+    -- defaults to empty string, but can be used to provide flags
+    -- such as "-tags=unit" to make sure the test suite is
+    -- compiled during debugging, for example.
+    -- passing build flags using args is ineffective, as those are
+    -- ignored by delve in dap mode.
+    build_flags = "",
+  },
+}
 lspconfig.emmet_ls.setup({
   -- on_attach = on_attach,
   capabilities = capabilities,
@@ -328,3 +409,5 @@ end
 vim.opt.relativenumber = true
 vim.opt.foldmethod = "expr"
 vim.opt.wrap = true
+
+

@@ -7,7 +7,6 @@
 # - ~/.config/alacritty/tokyonight/tokyonight.yml
 
 # colors: *tokyo-night
-
 font:
   normal:
     family: JetBrainsMono Nerd Font
@@ -21,7 +20,7 @@ font:
   bold_italic:
     family: JetBrainsMono Nerd Font
     style: Bold Italic
-  size: 12.0
+  size: 10.0
 window:
   decorations: none
   startup_mode: Maximized
@@ -30,9 +29,9 @@ window:
   position:
     x: 2
     y: 2
-  padding:
-    x: 2
-    y: 2
+  # padding:
+  # x: 2
+  # y: 2
 key_bindings:
   # (Windows, Linux, and BSD only)
   - { key: V, mods: Control|Shift, action: Paste }
