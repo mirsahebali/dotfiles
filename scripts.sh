@@ -5,11 +5,18 @@
 # go
 # ohmyposh
 # ohmyzsh
+echo "Enter the system"
+read system
 
+if [[ $system == "debian" ]]; then
 #For debian
-# sudo apt install git curl  zsh-autosuggestions zsh nodejs go tmux kitty alacritty fzf ripgrep  
+sudo apt install xclip git curl  zsh-autosuggestions zsh nodejs go tmux kitty alacritty fzf ripgrep telegram-desktop 
+ elif [[ $system == "arch"]]; then
 # For arch
-sudo pacman -Sy zsh-autosuggestions zsh nodejs go tmux kitty alacritty fzf ripgrep  
+sudo pacman -Sy xclip zsh-autosuggestions zsh nodejs go tmux kitty alacritty fzf ripgrep telegram-desktop 
+fi
+
+
 #ohmyzsh
 sudo echo "185.199.108.133       raw.githubusercontent.com" >> /etc/hosts
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
@@ -35,4 +42,6 @@ nvim
 
 
 git clone git@github.com:mirsahebali/user_example.git ~/.config/nvim/lua/user
+
+
 
