@@ -1,4 +1,10 @@
 # If you come from bash you might have to change your $PATH.
+autoload -Uz compinit
+compinit
+
+zstyle ':completion:*' menu select
+
+zstyle ':completion::complete:*' gain-privileges 1
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 eval "$(oh-my-posh init zsh --config 'https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/bubbles.omp.json')"
