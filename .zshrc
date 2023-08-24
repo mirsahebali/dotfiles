@@ -116,3 +116,4 @@ pmd(){
 #export LANG=en_IN.UTF-8
 export GOPATH=$HOME/go
 alias qemu=qemu-system-x86_64 
+alias pbs='~/pocketbase serve'

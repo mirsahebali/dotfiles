@@ -1,24 +1,48 @@
 #installing packages
 
 # nodejs
+# neovim
+# zsh
 # rustc
 # go
 # ohmyposh
 # ohmyzsh
+# lazygit
+# pip
+# python
+# tmux
+# kitty 
+# alacritty
+# telegram-desktop
+# fzf
+# ripgrep
+# zsh-autosuggestions
+# kdeconnect 
+# xclip
+# curl
+# unzip
+# git
+# npm
+# tpm
+# tmuxifier
+# astronvim
+# nerdfonts
+# ranger
+#
 echo "Enter the system"
 read system
 
 if [[ $system == "debian" ]]; then
 #For debian
-sudo apt install unzip xclip git curl  zsh-autosuggestions zsh nodejs  tmux kitty alacritty fzf ripgrep telegram-desktop 
+sudo apt install unzip xclip git curl  pip npm zsh-autosuggestions zsh nodejs lazygit tmux kitty alacritty fzf ripgrep telegram-desktop 
+echo "Install go and rustc separately!!!"
  elif [[ $system == "arch"]]; then
 # For arch
-sudo pacman -Sy xclip kdeconnect unzip zsh-autosuggestions zsh nodejs tmux kitty go alacritty fzf ripgrep telegram-desktop 
+sudo pacman -Sy xclip kdeconnect python-pip unzip npm lazygit zsh-autosuggestions zsh nodejs tmux kitty go alacritty fzf ripgrep telegram-desktop 
 echo "Installing rustc...."
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-echo "Install go and rustc separately!!!"
-echo "Link for go:  https://go.dev/doc/install"
 
+echo "Link for go:  https://go.dev/doc/install"
 
 fi
 echo "Install nerd font from: https://www.nerdfonts.com/font-downloads"
@@ -55,7 +79,7 @@ export PATH="$HOME/.tmuxifier/bin:$PATH"
 echo "Installing astronvim"
 #Installing astronvim
 git clone --depth 1 https://github.com/AstroNvim/AstroNvim ~/.config/nvim
-nvim
+# nvim
 
 
 git clone git@github.com:mirsahebali/user_example.git ~/.config/nvim/lua/user
