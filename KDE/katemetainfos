@@ -9,3 +9,15 @@ Mode=HTML
 Mode Set By User=false
 Time=2023,8,18,17,3,20.614
 URL=about:blank#blocked
+
+[file:///home/mirsahebali/go/pkg/mod/github.com/spf13/viper@v1.12.0/README.md]
+Bookmarks=
+Checksum=c14e8927a18335d7d6eaa57088a10e3103829f2e
+Encoding=UTF-8
+Highlighting=Markdown
+Highlighting Set By User=false
+Indentation Mode=normal
+Mode=Markdown
+Mode Set By User=false
+Time=2023,8,27,19,2,53.847
+URL=file:///home/mirsahebali/go/pkg/mod/github.com/spf13/viper@v1.12.0/README.md

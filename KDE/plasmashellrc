@@ -1,3 +1,12 @@
+[KFileDialog Settings]
+Recent Files[$e]=breno-machado-in9-n0JwgZ0-unsplash.jpg,file:$HOME/Downloads/unnamed.png,file:$HOME/Downloads/breno-machado-in9-n0JwgZ0-unsplash.jpg
+Recent URLs[$e]=file:$HOME/Downloads/,file:$HOME/
+detailViewIconSize=16
+
+[KPropertiesDialog]
+1920x1080 screen: Height=529
+1920x1080 screen: Width=527
+
 [PlasmaTransientsConfig]
 PreloadWeight=0
 
@@ -18,11 +27,11 @@ minLength=100
 
 [PlasmaViews][Panel 24]
 alignment=132
-floating=0
+floating=1
 panelOpacity=2
 
 [PlasmaViews][Panel 24][Defaults]
-thickness=35
+thickness=39
 
 [Updates]
 performed=/usr/share/plasma/shells/org.kde.plasma.desktop/contents/updates/maintain_existing_desktop_icon_sizes.js,/usr/share/plasma/shells/org.kde.plasma.desktop/contents/updates/klipper_clear_config.js,/usr/share/plasma/shells/org.kde.plasma.desktop/contents/updates/keyboardlayout_remove_shortcut.js,/usr/share/plasma/shells/org.kde.plasma.desktop/contents/updates/move_desktop_layout_config.js,/usr/share/plasma/shells/org.kde.plasma.desktop/contents/updates/digitalclock_migrate_font_settings.js,/usr/share/plasma/shells/org.kde.plasma.desktop/contents/updates/no_middle_click_paste_on_panels.js,/usr/share/plasma/shells/org.kde.plasma.desktop/contents/updates/mediaframe_migrate_useBackground_setting.js,/usr/share/plasma/shells/org.kde.plasma.desktop/contents/updates/containmentactions_middlebutton.js,/usr/share/plasma/shells/org.kde.plasma.desktop/contents/updates/digitalclock_rename_timezonedisplay_key.js,/usr/share/plasma/shells/org.kde.plasma.desktop/contents/updates/unlock_widgets.js,/usr/share/plasma/shells/org.kde.plasma.desktop/contents/updates/systemloadviewer_systemmonitor.js,/usr/share/plasma/shells/org.kde.plasma.desktop/contents/updates/keyboardlayout_migrateiconsetting.js

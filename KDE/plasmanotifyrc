@@ -3,3 +3,9 @@ Seen=true
 
 [Applications][brave-browser-beta]
 Seen=true
+
+[DoNotDisturb]
+Until=2023,8,28,22,12,0.739
+
+[Notifications]
+PopupTimeout=3000

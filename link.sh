@@ -1,6 +1,6 @@
 # change astronvim/nvim to nvchad/nvim for nvchad config
-
-myConfig=("alacritty" "kitty" "astronvim/nvim" "lvim" "tmux" ".zshrc")
+#astronvim lvim 
+myConfig=("alacritty" "kitty"  "tmux" ".zshrc")
 
 for conf in ${myConfig[@]}; do 
 

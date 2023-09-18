@@ -7,7 +7,7 @@ zstyle ':completion:*' menu select
 zstyle ':completion::complete:*' gain-privileges 1
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-eval "$(oh-my-posh init zsh --config 'https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/bubbles.omp.json')"
+eval "$(oh-my-posh init zsh --config '~/.themes/space.omp.json')"
 # Path to your oh-my-zsh installation.
 export ANDROID_HOME=$HOME/Android/Sdk
 # export PATH=$PATH:$ANDROID_HOME/
@@ -28,7 +28,7 @@ ZSH_THEME="robbyrussell"
 
 source $ZSH/oh-my-zsh.sh
 plugins=(git
-    # zsh-autosuggestions
+    zsh-autosuggestions
     fd
     fzf
     npm
@@ -117,3 +117,13 @@ pmd(){
 export GOPATH=$HOME/go
 alias qemu=qemu-system-x86_64 
 alias pbs='~/pocketbase serve'
+
+# bun completions
+[ -s "/home/mirsahebali/.bun/_bun" ] && source "/home/mirsahebali/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+alias dk='drizzle-kit'
+alias icat='kitty +kitten icat'
+alias bringsvg="~/Downloads/*.svg ./src/svgs"

@@ -1,8 +1,8 @@
 [General]
-ColorScheme=FlightDarkColorScheme
+ColorScheme=CatppuccinMochaFlamingo
 
 [Icons]
-Theme=breeze-dark
+Theme=BeautyLine
 
 [KDE]
-widgetStyle=Breeze
+widgetStyle=kvantum-dark

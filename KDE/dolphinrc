@@ -1,5 +1,5 @@
 [$Version]
-update_info=dolphin_detailsmodesettings.upd:rename-leading-padding
+update_info=dolphin_detailsmodesettings.upd:rename-leading-padding,dolphin_detailsmodesettings.upd:move-content-display
 
 [General]
 Version=202
@@ -8,6 +8,10 @@ ViewPropsTimestamp=2023,8,18,22,55,53.416
 [KFileDialog Settings]
 Places Icons Auto-resize=false
 Places Icons Static Size=22
+
+[KPropertiesDialog]
+1536x864 screen: Height=494
+1536x864 screen: Width=480
 
 [MainWindow]
 MenuBar=Disabled

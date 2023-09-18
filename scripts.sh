@@ -32,19 +32,19 @@
 echo "Enter the system"
 read system
 
-if [[ $system == "debian" ]]; then
+#if [[ $system == "debian" ]]; then
 #For debian
-sudo apt install unzip xclip git curl  pip npm zsh-autosuggestions zsh nodejs lazygit tmux kitty alacritty fzf ripgrep telegram-desktop 
+#sudo apt install unzip xclip git curl  pip npm zsh-autosuggestions zsh nodejs lazygit tmux kitty alacritty fzf ripgrep telegram-desktop 
 echo "Install go and rustc separately!!!"
- elif [[ $system == "arch"]]; then
+# elif [[ $system == "arch"]]; then
 # For arch
-sudo pacman -Sy xclip kdeconnect python-pip unzip npm lazygit zsh-autosuggestions zsh nodejs tmux kitty go alacritty fzf ripgrep telegram-desktop 
+sudo pacman -Sy xclip kdeconnect python-pip noto-fonts noto-fonts-extra  unzip npm lazygit zsh-autosuggestions zsh nodejs tmux kitty go alacritty fzf ripgrep telegram-desktop signal-desktop 
 echo "Installing rustc...."
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
 echo "Link for go:  https://go.dev/doc/install"
 
-fi
+#:i
 echo "Install nerd font from: https://www.nerdfonts.com/font-downloads"
 
 #ohmyzsh

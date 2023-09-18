@@ -3,126 +3,176 @@ update_info=filepicker.upd:filepicker-remove-old-previews-entry,fonts_global.upd
 
 [ColorEffects:Disabled]
 ChangeSelectionColor=
-Color=56,56,56
-ColorAmount=0
-ColorEffect=0
-ContrastAmount=0.65
-ContrastEffect=1
+Color=30, 30, 46
+ColorAmount=0.30000000000000004
+ColorEffect=2
+ContrastAmount=0.1
+ContrastEffect=0
 Enable=
-IntensityAmount=0.1
-IntensityEffect=2
+IntensityAmount=-1
+IntensityEffect=0
 
 [ColorEffects:Inactive]
 ChangeSelectionColor=true
-Color=112,111,110
-ColorAmount=0.025000000000000001
-ColorEffect=2
-ContrastAmount=0.10000000000000001
-ContrastEffect=2
-Enable=false
+Color=30, 30, 46
+ColorAmount=0.5
+ColorEffect=3
+ContrastAmount=0
+ContrastEffect=0
+Enable=true
 IntensityAmount=0
 IntensityEffect=0
 
 [Colors:Button]
-BackgroundAlternate=28,32,47
-BackgroundNormal=31,36,52
-DecorationFocus=39,66,104
-DecorationHover=48,80,126
-ForegroundActive=61,174,233
-ForegroundInactive=139,145,157
-ForegroundLink=41,128,185
-ForegroundNegative=217,72,109
-ForegroundNeutral=255,170,127
-ForegroundNormal=195,199,209
-ForegroundPositive=113,247,159
-ForegroundVisited=82,148,226
+BackgroundAlternate=242,205,205
+BackgroundNormal=49, 50, 68
+DecorationFocus=242,205,205
+DecorationHover=49, 50, 68
+ForegroundActive=250, 179, 135
+ForegroundInactive=166, 173, 200
+ForegroundLink=242,205,205
+ForegroundNegative=243, 139, 168
+ForegroundNeutral=249, 226, 175
+ForegroundNormal=205, 214, 244
+ForegroundPositive=166, 227, 161
+ForegroundVisited=203, 166, 247
 
 [Colors:Complementary]
-BackgroundAlternate=28,32,47
-BackgroundNormal=28,32,47
-DecorationFocus=39,66,104
-DecorationHover=48,80,126
-ForegroundNegative=217,72,109
-ForegroundNeutral=255,170,127
-ForegroundPositive=113,247,159
+BackgroundAlternate=17, 17, 27
+BackgroundNormal=24, 24, 37
+DecorationFocus=242,205,205
+DecorationHover=49, 50, 68
+ForegroundActive=250, 179, 135
+ForegroundInactive=166, 173, 200
+ForegroundLink=242,205,205
+ForegroundNegative=243, 139, 168
+ForegroundNeutral=249, 226, 175
+ForegroundNormal=205, 214, 244
+ForegroundPositive=166, 227, 161
+ForegroundVisited=203, 166, 247
+
+[Colors:Header]
+BackgroundAlternate=17, 17, 27
+BackgroundNormal=24, 24, 37
+DecorationFocus=242,205,205
+DecorationHover=49, 50, 68
+ForegroundActive=250, 179, 135
+ForegroundInactive=166, 173, 200
+ForegroundLink=242,205,205
+ForegroundNegative=243, 139, 168
+ForegroundNeutral=249, 226, 175
+ForegroundNormal=205, 214, 244
+ForegroundPositive=166, 227, 161
+ForegroundVisited=203, 166, 247
 
 [Colors:Selection]
-BackgroundAlternate=29,153,243
-BackgroundNormal=39,66,104
-DecorationFocus=39,66,104
-DecorationHover=48,80,126
-ForegroundActive=252,252,252
-ForegroundInactive=211,218,227
-ForegroundLink=253,188,75
-ForegroundNegative=217,72,109
-ForegroundNeutral=255,170,127
-ForegroundNormal=254,254,254
-ForegroundPositive=113,247,159
-ForegroundVisited=189,195,199
+BackgroundAlternate=242,205,205
+BackgroundNormal=242,205,205
+DecorationFocus=242,205,205
+DecorationHover=49, 50, 68
+ForegroundActive=250, 179, 135
+ForegroundInactive=24, 24, 37
+ForegroundLink=242,205,205
+ForegroundNegative=243, 139, 168
+ForegroundNeutral=249, 226, 175
+ForegroundNormal=17, 17, 27
+ForegroundPositive=166, 227, 161
+ForegroundVisited=203, 166, 247
 
 [Colors:Tooltip]
-BackgroundAlternate=28,32,47
-BackgroundNormal=31,36,52
-DecorationFocus=39,66,104
-DecorationHover=48,80,126
-ForegroundActive=61,174,233
-ForegroundInactive=139,145,157
-ForegroundLink=41,128,185
-ForegroundNegative=217,72,109
-ForegroundNeutral=255,170,127
-ForegroundNormal=211,218,227
-ForegroundPositive=113,247,159
-ForegroundVisited=82,148,226
+BackgroundAlternate=27,25,35
+BackgroundNormal=30, 30, 46
+DecorationFocus=242,205,205
+DecorationHover=49, 50, 68
+ForegroundActive=250, 179, 135
+ForegroundInactive=166, 173, 200
+ForegroundLink=242,205,205
+ForegroundNegative=243, 139, 168
+ForegroundNeutral=249, 226, 175
+ForegroundNormal=205, 214, 244
+ForegroundPositive=166, 227, 161
+ForegroundVisited=203, 166, 247
 
 [Colors:View]
-BackgroundAlternate=31,35,51
-BackgroundNormal=23,27,39
-DecorationFocus=39,66,104
-DecorationHover=48,80,126
-ForegroundActive=0,193,228
-ForegroundInactive=139,145,157
-ForegroundLink=82,148,226
-ForegroundNegative=217,72,109
-ForegroundNeutral=255,170,127
-ForegroundNormal=211,218,227
-ForegroundPositive=113,247,159
-ForegroundVisited=124,183,255
+BackgroundAlternate=24, 24, 37
+BackgroundNormal=30, 30, 46
+DecorationFocus=242,205,205
+DecorationHover=49, 50, 68
+ForegroundActive=250, 179, 135
+ForegroundInactive=166, 173, 200
+ForegroundLink=242,205,205
+ForegroundNegative=243, 139, 168
+ForegroundNeutral=249, 226, 175
+ForegroundNormal=205, 214, 244
+ForegroundPositive=166, 227, 161
+ForegroundVisited=203, 166, 247
 
 [Colors:Window]
-BackgroundAlternate=28,32,47
-BackgroundNormal=28,32,47
-DecorationFocus=39,66,104
-DecorationHover=48,80,126
-ForegroundActive=61,174,233
-ForegroundInactive=139,145,157
-ForegroundLink=41,128,185
-ForegroundNegative=217,72,109
-ForegroundNeutral=255,170,127
-ForegroundNormal=211,218,227
-ForegroundPositive=113,247,159
-ForegroundVisited=179,13,191
+BackgroundAlternate=17, 17, 27
+BackgroundNormal=24, 24, 37
+DecorationFocus=242,205,205
+DecorationHover=49, 50, 68
+ForegroundActive=250, 179, 135
+ForegroundInactive=166, 173, 200
+ForegroundLink=242,205,205
+ForegroundNegative=243, 139, 168
+ForegroundNeutral=249, 226, 175
+ForegroundNormal=205, 214, 244
+ForegroundPositive=166, 227, 161
+ForegroundVisited=203, 166, 247
+
+[DirSelect Dialog]
+DirSelectDialog Size=788,478
+History Items[$e]=file:///
 
 [General]
-BrowserApplication=brave-browser-beta.desktop
-ColorSchemeHash=449ed37ae6fa03b473c6728b6d9f57c73cefa3a0
+BrowserApplication=brave-browser.desktop
+ColorSchemeHash=6c37b13729b9f3b13aef5b6670b0a0f29a5e8096
+Name=Utterly-Sweet
+TintFactor=0.09
 XftHintStyle=hintslight
 XftSubPixel=rgb
-font=JetBrainsMono Nerd Font,10,-1,5,50,0,0,0,0,0
+accentActiveTitlebar=true
+accentInactiveTitlebar=true
+font=UbuntuMono Nerd Font,10,-1,5,50,0,0,0,0,0
+shadeSortColumn=true
 
 [Icons]
-Theme=Tela-dark
+Theme=Tela-nord
 
 [KDE]
-LookAndFeelPackage=org.kde.breezedark.desktop
+ColorScheme=UtterlySweet
+LookAndFeelPackage=Utterly-Sweet
+contrast=4
+
+[KFileDialog Settings]
+Allow Expansion=false
+Automatically select filename extension=true
+Breadcrumb Navigation=true
+Decoration position=2
+LocationCombo Completionmode=5
+PathCombo Completionmode=5
+Show Bookmarks=false
+Show Full Path=false
+Show Inline Previews=true
+Show Preview=false
+Show Speedbar=true
+Show hidden files=false
+Sort by=Date
+Sort directories first=true
+Sort hidden files last=false
+Sort reversed=true
+Speedbar Width=146
+View Style=DetailTree
 
 [KScreen]
 ScaleFactor=1.25
 ScreenScaleFactors=eDP-1=1.25;
 
 [WM]
-activeBackground=28,32,47
-activeBlend=28,32,47
-activeForeground=211,218,227
-inactiveBackground=34,39,57
-inactiveBlend=28,32,47
-inactiveForeground=141,147,159
+activeBackground=30,30,46
+activeBlend=205,214,244
+activeForeground=205,214,244
+inactiveBackground=17,17,27
+inactiveBlend=166,173,200
+inactiveForeground=166,173,200
