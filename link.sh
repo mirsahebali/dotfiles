@@ -1,9 +1,9 @@
-# change astronvim/nvim to nvchad/nvim for nvchad config
-#astronvim lvim 
-myConfig=("alacritty" "kitty"  "tmux" ".zshrc")
+# TODO: Add dotfiles for kde
 
-for conf in ${myConfig[@]}; do 
+myConfig=("kitty" "tmux" "nvim" "awesome" "picom" "polybar" "plasmaConfSaver" "rofi")
 
-	ln -s $HOME/.dotfiles/$conf $HOME/.config
-	
+for conf in ${myConfig[@]}; do
+
+	ln -s $HOME/dotfiles/$conf $HOME/.config
+
 done

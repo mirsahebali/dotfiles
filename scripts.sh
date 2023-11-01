@@ -1,46 +1,24 @@
 #installing packages
 
-# nodejs
-# neovim
-# zsh
-# rustc
-# go
-# ohmyposh
-# ohmyzsh
-# lazygit
-# pip
-# python
-# tmux
-# kitty 
-# alacritty
-# telegram-desktop
-# fzf
-# ripgrep
-# zsh-autosuggestions
-# kdeconnect 
-# xclip
-# curl
-# unzip
-# git
-# npm
-# tpm
-# tmuxifier
-# astronvim
-# nerdfonts
-# ranger
-#
-echo "Enter the system"
-read system
-
-#if [[ $system == "debian" ]]; then
-#For debian
-#sudo apt install unzip xclip git curl  pip npm zsh-autosuggestions zsh nodejs lazygit tmux kitty alacritty fzf ripgrep telegram-desktop 
-echo "Install go and rustc separately!!!"
-# elif [[ $system == "arch"]]; then
 # For arch
-sudo pacman -Sy xclip kdeconnect python-pip noto-fonts noto-fonts-extra  unzip npm lazygit zsh-autosuggestions zsh nodejs tmux kitty go alacritty fzf ripgrep telegram-desktop signal-desktop 
-echo "Installing rustc...."
+sudo pacman -Sy xclip clang \
+	kdeconnect python-pip noto-fonts noto-fonts-extra \
+	unzip npm lazygit zsh-autosuggestions \
+	zsh nodejs tmux kitty go alacritty \
+	fzf ripgrep telegram-desktop signal-desktop \
+	jre-openjdk docker docker-buildx \
+	base-devel git jlink xorg-server xorg pulseaudio pulseaudio-alsa \
+	pulseaudio-bluetooth rofi bluetoothctl pavucontrol openssh linux-lts-headers linux-header dkms \
+	v4l2loopback-dkms \
+	v4l2loopback-utils v4l-utils
+
+figlet "Installing rustc...."
+
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
+figlet installing bun
+
+curl -fsSL https://bun.sh/install | bash
 
 echo "Link for go:  https://go.dev/doc/install"
 
@@ -48,7 +26,7 @@ echo "Link for go:  https://go.dev/doc/install"
 echo "Install nerd font from: https://www.nerdfonts.com/font-downloads"
 
 #ohmyzsh
-sudo echo "185.199.108.133       raw.githubusercontent.com" >> /etc/hosts
+sudo echo "185.199.108.133       raw.githubusercontent.com" >>/etc/hosts
 echo "added githubusercontent to /etc/hosts/  "
 
 echo "adding ohmyzsh"
@@ -61,10 +39,6 @@ curl -s https://ohmyposh.dev/install.sh | sudo bash -s
 rm -rf ~/.zshrc
 ln -s $HOME/.dotfiles/.zshrc $HOME/
 
-exec zsh
-
-
-
 echo "Adding tmux plugin manager"
 # TPM
 #
@@ -75,14 +49,26 @@ echo "Adding tmuxifier"
 git clone https://github.com/jimeh/tmuxifier.git ~/.tmuxifier
 export PATH="$HOME/.tmuxifier/bin:$PATH"
 
+echo "Setup git config"
 
-echo "Installing astronvim"
-#Installing astronvim
-git clone --depth 1 https://github.com/AstroNvim/AstroNvim ~/.config/nvim
-# nvim
+git config --global user.name "Mir Saheb Ali"
 
+git config --global user.email "mirsahebali204@gmail.com"
 
-git clone git@github.com:mirsahebali/user_example.git ~/.config/nvim/lua/user
+echo "Setup ssh key"
 
+ssh-keygen -t rsa -C mirsahebali204@gmail.com
 
+figlet setting up neovim
 
+git clone git@github.com:mirsahebali/LazyVim.git ~/.config/nvim
+
+figlet installing YAY
+
+git clone https://aur.archlinux.org/yay.git
+
+cd yay
+
+makepkg -si
+
+yay -S brave-bin awesome-git iriunwebcam-bin rofi-greenclip
